@@ -2,6 +2,11 @@
 name = "bark_rs"
 version = "0.1.0"
 edition = "2024"
+description = "A Rust client for bark.day.app"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/ch1y1z1/bark_rs"
+homepage = "https://github.com/ch1y1z1/bark_rs"
 
 [dependencies]
 reqwest = { version = "0.12.23", features = ["json", "blocking"] }
