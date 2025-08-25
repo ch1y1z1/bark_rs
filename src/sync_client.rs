@@ -75,10 +75,10 @@ use std::collections::HashMap;
 pub struct SyncBarkClient {
     /// 内部 HTTP 客户端
     client: reqwest::blocking::Client,
-    
+
     /// Bark 服务器的基础 URL
     pub(crate) base_url: String,
-    
+
     /// 可选的默认设备密钥
     pub(crate) default_device_key: Option<String>,
 }
@@ -124,7 +124,7 @@ impl SyncBarkClient {
     /// use bark_rs::SyncBarkClient;
     ///
     /// let client = SyncBarkClient::with_device_key(
-    ///     "https://api.day.app", 
+    ///     "https://api.day.app",
     ///     "your_device_key"
     /// );
     /// ```

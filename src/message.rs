@@ -28,17 +28,17 @@ pub enum Level {
     ///
     /// 在静音模式下也会响铃，会突破勿扰模式显示通知
     Critical,
-    
+
     /// 默认活跃级别
     ///
     /// 系统会立即亮屏显示通知，这是默认值
     Active,
-    
+
     /// 时效性通知级别
     ///
     /// 可在专注状态下显示，用于时间敏感的通知
     TimeSensitive,
-    
+
     /// 被动级别
     ///
     /// 仅添加到通知列表，不会亮屏提醒用户
@@ -64,10 +64,10 @@ impl Level {
 pub struct BarkResponse {
     /// 响应状态码，200 表示成功
     pub code: i32,
-    
+
     /// 响应消息内容
     pub message: String,
-    
+
     /// 可选的时间戳
     pub timestamp: Option<i64>,
 }
@@ -108,61 +108,61 @@ pub struct BarkResponse {
 pub struct BarkMessage {
     /// 推送标题
     pub title: Option<String>,
-    
+
     /// 推送副标题
     pub subtitle: Option<String>,
-    
+
     /// 推送内容（必需）
     pub body: String,
-    
+
     /// 设备密钥（单个设备）
     pub device_key: Option<String>,
-    
+
     /// 设备密钥列表（批量推送）
     pub device_keys: Option<Vec<String>>,
-    
+
     /// 推送级别
     pub level: Option<Level>,
-    
+
     /// 音量大小 (1-10)
     pub volume: Option<u8>,
-    
+
     /// 应用角标数字
     pub badge: Option<u32>,
-    
+
     /// 是否重复播放铃声
     pub call: Option<bool>,
-    
+
     /// 是否自动复制推送内容
     pub auto_copy: Option<bool>,
-    
+
     /// 自定义复制内容
     pub copy: Option<String>,
-    
+
     /// 铃声名称
     pub sound: Option<String>,
-    
+
     /// 自定义图标 URL
     pub icon: Option<String>,
-    
+
     /// 消息分组
     pub group: Option<String>,
-    
+
     /// 加密文本
     pub ciphertext: Option<String>,
-    
+
     /// 是否保存到历史
     pub is_archive: Option<bool>,
-    
+
     /// 点击跳转的 URL
     pub url: Option<String>,
-    
+
     /// 动作类型
     pub action: Option<String>,
-    
+
     /// 消息唯一标识
     pub id: Option<String>,
-    
+
     /// 是否删除消息
     pub delete: Option<bool>,
 }

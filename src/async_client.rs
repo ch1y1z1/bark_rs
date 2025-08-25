@@ -92,10 +92,10 @@ use std::collections::HashMap;
 pub struct AsyncBarkClient {
     /// 内部异步 HTTP 客户端
     client: Client,
-    
+
     /// Bark 服务器的基础 URL
     pub(crate) base_url: String,
-    
+
     /// 可选的默认设备密钥
     pub(crate) default_device_key: Option<String>,
 }
@@ -142,7 +142,7 @@ impl AsyncBarkClient {
     /// use bark_rs::AsyncBarkClient;
     ///
     /// let client = AsyncBarkClient::with_device_key(
-    ///     "https://api.day.app", 
+    ///     "https://api.day.app",
     ///     "your_device_key"
     /// );
     /// ```
